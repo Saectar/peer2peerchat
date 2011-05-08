@@ -1,0 +1,51 @@
+peer2peer-chat.com
+free open source 
+
+Guide : how to install it ?
+
+Compilation part
+----------------
+
+
+
+1) Unzip the chat.zip file into a folder
+
+
+2) Create a mysql databse unsing the db_create.sql file
+
+edit sql.php and points it to your database
+
+3) Import peer2peerchat.zip in Flex4 project and edit Config.as, line 3:
+public const DeveloperKey:String = "Put your developer key from adobe"; 
+If you don not have your startus key, you can get one from : https://www.adobe.com/cfusion/entitlement/index.cfm?e=cirrus 
+
+4) Compile the flex and .. that's all !
+
+
+
+Integration part into your website.
+-----------------------------------
+
+
+
+You can integrate the chat into any webpage. As the chat is one2one chat, you should integrate the chat into ALL pages of your website, so users can be called from anywhere while they visit your website. 
+Have a look at index.php to understand how to integarte it with your existing site.
+Some keys to install it :
+
+use a session variable username like username: You should insert that code in every web page when user can get webcam chat:
+<?php session_start(); $_SESSION['username'] = $_REQUEST["username"]; ?>
+
+in the <header>, you should add this line: <? include("include_chat.php"); ?> in every page where the chat is included.
+
+if you need the list of connected users, you can use getOnlineUsers.php file which is a simple sql statement 
+
+
+
+
+The best thing to do is to have a look at index.php and see how it is done.
+
+
+
+Proxymis Multimedia
+24 rue de la Cité, 59800 Lille, France
+You can also contact us by phone: 00 333 2031 9229 
